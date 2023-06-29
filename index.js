@@ -35,6 +35,7 @@ document
           if ((document.getElementById("exampleInputEmail1").value == d[0].id &&
               document.getElementById("exampleInputPassword1").value ==
               d[0].password)) {
+            
             document.getElementById("alert2").classList.remove("d-none");
             document.getElementById("alert2").classList.add("d-block");
             setTimeout(() => {
@@ -395,3 +396,31 @@ document
     document.getElementById("maincard").classList.remove("hidden");
     document.getElementById("table").classList.add("hidden");
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

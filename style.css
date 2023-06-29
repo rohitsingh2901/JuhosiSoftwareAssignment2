@@ -118,3 +118,37 @@ th{
     color: white;
     font-weight: bold;
   }
+
+  .radio{
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 3px;
+  }
+
+
+  #exampleInput1:hover{
+    cursor: not-allowed;
+  }
+  #exampleInput2:hover{
+    cursor: not-allowed;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

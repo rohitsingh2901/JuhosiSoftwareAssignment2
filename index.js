@@ -9,8 +9,8 @@ document
     // console.log('check')
     event.preventDefault();
 
-
-    fetch("http://127.0.0.1:3000/userdetails", {
+    document.getElementById('spinner').style.display = 'block';
+    fetch("https://abaft-invited-anorak.glitch.me/userdetails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,9 @@ document
         document.getElementById("alert3").classList.add("d-none");
       }, 3000);
           console.error(error);
-        })
+        }).finally(()=>{
+    document.getElementById('spinner').style.display = 'none';
+        });
 
   });
 
@@ -107,7 +109,7 @@ document
 
 
     document.getElementById('spinner').style.display = 'block';
-    fetch("http://127.0.0.1:3000/insertData", {
+    fetch("https://abaft-invited-anorak.glitch.me/insertData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -207,7 +209,7 @@ document
         cpass : cpass
       }
     document.getElementById('spinner').style.display = 'block';
-    fetch("http://127.0.0.1:3000/changepass", {
+    fetch("https://abaft-invited-anorak.glitch.me/changepass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -238,11 +240,11 @@ document
             }, 3000);
           }
           else{
-            document.getElementById("alert1").classList.remove("d-none");
-            document.getElementById("alert1").classList.add("d-block");
+            document.getElementById("alert8").classList.remove("d-none");
+            document.getElementById("alert8").classList.add("d-block");
             setTimeout(() => {
-            document.getElementById("alert1").classList.remove("d-block");
-              document.getElementById("alert1").classList.add("d-none");
+            document.getElementById("alert8").classList.remove("d-block");
+              document.getElementById("alert8").classList.add("d-none");
             }, 3000);
           }
         })
@@ -273,8 +275,12 @@ document
     document.getElementById("innerBox").classList.add("hidden");
     document.getElementById("maincard").classList.add("hidden");
     document.getElementById("table").classList.remove("hidden");
+
+    
+
+
     document.getElementById('spinner').style.display = 'block';
-    fetch("http://127.0.0.1:3000/table", {
+    fetch("https://abaft-invited-anorak.glitch.me/table", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -308,15 +314,12 @@ document
           var element = document.getElementById("mainBox");
           element.style.overflowY = "auto";
           for (var i = 0; i < dd.length; i++){
-            var row = `<tr>
+            var row = `<tr class="trback">
                     <td>${dd[i].id}</td>
-                    <td>${dd[i].orderListId}</td>
                     <td>${dd[i].productId}</td>
                     <td>${dd[i].package}</td>
                     <td>${dd[i].request_weight}</td>
-                    <td>${dd[i].result_weight}</td>
                     <td>${dd[i].orderDate}</td>
-                    <td>${dd[i].price}</td>
                     <td>${dd[i].order_id}</td>
                     <td>${dd[i].count}</td>
                     <td>${dd[i].requests}</td>
@@ -341,6 +344,12 @@ document
         })
         .finally(()=>{
           document.getElementById('spinner').style.display = 'none';
+          document.getElementById("alert9").classList.remove("d-none");
+      document.getElementById("alert9").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert9").classList.remove("d-block");
+        document.getElementById("alert9").classList.add("d-none");
+      }, 3000);
         });
 
 
@@ -352,7 +361,25 @@ document
     var table = document.getElementById("maintable");
     var workbook = XLSX.utils.table_to_book(table);
     var filename = "table.xlsx";
-
     XLSX.writeFile(workbook, filename, { bookType: "xlsx" });
+    document.getElementById("alert10").classList.remove("d-none");
+      document.getElementById("alert10").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert10").classList.remove("d-block");
+        document.getElementById("alert10").classList.add("d-none");
+      }, 3000);
   }
 
+
+
+  function loadback(){
+    const elements = document.getElementsByClassName('trback');
+    const elementsArray = Array.from(elements);
+    elementsArray.forEach((element) => {
+      element.remove();
+    });
+    document.getElementById("customer2Form").classList.remove("hidden");
+    document.getElementById("innerBox").classList.remove("hidden");
+    document.getElementById("maincard").classList.remove("hidden");
+    document.getElementById("table").classList.add("hidden");
+  }

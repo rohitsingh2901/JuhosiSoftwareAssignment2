@@ -86,7 +86,7 @@ app.post('/insertData', (req, res) => {
 
 
 app.get('/table', (req, res) => {
-  pool.query('SELECT * FROM OrderItem WHERE user_id=29',(error, results)=>{
+  pool.query('SELECT id,productId,package,request_weight,orderDate,order_id,count,requests,user_id,create_time FROM OrderItem WHERE user_id=29',(error, results)=>{
       if (error) throw error;
       res.send(results);
   });

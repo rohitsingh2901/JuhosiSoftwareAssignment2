@@ -1,0 +1,116 @@
+.all{
+    position: relative;
+    height: 6vh;
+    background-image: linear-gradient(to right, rgba(11, 11, 11, 0.612), rgb(45, 36, 36));
+
+}
+.box{
+    width: 100vw;
+    height: 94vh;
+    position: fixed;
+    bottom: 0px;
+    background-image: linear-gradient(to right, rgba(11, 11, 11, 0.612), rgb(45, 36, 36));
+}
+.innerBox{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 40rem;
+    border-radius: 15px;
+    background-color: rgb(41, 39, 39);
+}
+.custom-color{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.custom-color:focus{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.hidden {
+    display: none;
+}
+.alert{
+    background: linear-gradient(to right, rgba(11, 11, 11, 0.612), rgb(45, 36, 36));
+    color: white;
+    margin: 0px ;
+}
+#orderdate{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+#orderdate:focus{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.form2{
+    display: flex;
+    justify-content: space-around;
+}
+.table{
+    background-color: rgb(41, 39, 39);
+}
+#spinner{
+    background-image: linear-gradient(to right, rgba(11, 11, 11, 0.612), rgb(45, 36, 36));
+    color: white;
+    height: 56px;
+}
+.modal-content{
+    border-radius: 20px;
+    color:  white;
+    background-color: rgb(41, 39, 39);
+}
+.btnleft{
+    text-align: right;
+}
+#exampleInput1{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+#exampleInput2{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.excel{
+    display: flex;
+    justify-content: end;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+.radio{
+    display: flex;
+    justify-content: space-around;
+}
+label{
+    font-weight: bold;
+}
+td{
+    color: white;
+}
+#table{
+    margin: 50px;
+}
+th{ 
+    color:black;
+    font-weight: bolder;
+        }
+.table-striped{
+    border: 4px solid rgb(229, 221, 207);
+}
+.export{
+    display: flex;
+    justify-content: end;
+}
+.modal-backdrop {
+    z-index: -1;
+  }
+  #errorbox{
+    height: 25px;
+  }

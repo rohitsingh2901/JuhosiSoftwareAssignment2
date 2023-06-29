@@ -172,7 +172,7 @@ document
 
   window.onload = function() {
     var currentPage = window.location.href;
-    var homePage = "https://rohitsingh2901.github.io/JuhosiSoftwareAssignment/";
+    var homePage = "https://rohitsingh2901.github.io/JuhosiSoftwareAssignment2/";
   
     if (currentPage === homePage) {
       document.getElementById("alert5").classList.remove("d-none");
@@ -188,7 +188,7 @@ document
   function goToHomePage(event) {
     event.preventDefault(); 
 
-    window.location = "/JuhosiSoftwareAssignment"; 
+    window.location = "/JuhosiSoftwareAssignment2"; 
   }
 
 

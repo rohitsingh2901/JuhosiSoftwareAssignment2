@@ -50,7 +50,8 @@ app.post('/changepass',(req,res)=>{
 
 
 app.post('/userdetails',(req,res)=>{
-  pool.query(`SELECT * FROM \`User\` WHERE id = 29 `, (error, results) => {
+  const {id} = req.body;
+  pool.query(`SELECT * FROM \`User\` WHERE id = ${id} `, (error, results) => {
     if (error) {
         console.error('Error retrieving data from database:', error);
     } else {
@@ -85,8 +86,9 @@ app.post('/insertData', (req, res) => {
 });
 
 
-app.get('/table', (req, res) => {
-  pool.query('SELECT id,productId,package,request_weight,orderDate,order_id,count,requests,user_id,create_time FROM OrderItem WHERE user_id=29',(error, results)=>{
+app.post('/table', (req, res) => {
+  const {gid} = req.body;
+  pool.query(`SELECT id,productId,package,request_weight,orderDate,order_id,count,requests,user_id,create_time FROM OrderItem WHERE user_id=${gid}`,(error, results)=>{
       if (error) throw error;
       res.send(results);
   });

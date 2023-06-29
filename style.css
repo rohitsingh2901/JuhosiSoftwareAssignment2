@@ -114,3 +114,7 @@ th{
   #errorbox{
     height: 25px;
   }
+  #heading{
+    color: white;
+    font-weight: bold;
+  }

@@ -2,7 +2,7 @@ function hiddeMain(){
   document.getElementById("maincard").classList.toggle("hidden");
 }
 
-
+let gid = 0;
 document
   .getElementById("customer1Form")
   .addEventListener("submit", function (event) {
@@ -10,11 +10,17 @@ document
     event.preventDefault();
 
     document.getElementById('spinner').style.display = 'block';
+    const id = document.getElementById("exampleInputEmail1").value;
+    gid = id;
+    const pass = document.getElementById("exampleInputPassword1").value;
+    const formdata = {id,pass}
+
     fetch("https://abaft-invited-anorak.glitch.me/userdetails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body : JSON.stringify(formdata)
       })
       .then(function (response) {
           if (response.ok) {
@@ -26,7 +32,7 @@ document
         .then(function (data) {
           // Handle the server response
           const d = JSON.parse(data);
-          if ((document.getElementById("exampleInputEmail1").value == "Rohit" &&
+          if ((document.getElementById("exampleInputEmail1").value == d[0].id &&
               document.getElementById("exampleInputPassword1").value ==
               d[0].password)) {
             document.getElementById("alert2").classList.remove("d-none");
@@ -276,15 +282,17 @@ document
     document.getElementById("maincard").classList.add("hidden");
     document.getElementById("table").classList.remove("hidden");
 
+    const formdata = {gid};
     
 
 
     document.getElementById('spinner').style.display = 'block';
     fetch("https://abaft-invited-anorak.glitch.me/table", {
-        method: "GET",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
-        }
+        },
+        body : JSON.stringify(formdata)
       })
       .then(function (response) {
           if (response.ok) {
@@ -303,10 +311,11 @@ document
           // Handle the server response
           const d = JSON.parse(data);
           const dd = Array.from(d);
-
-          
-        
-        buildTable(dd)
+          if(dd.length==0){
+            document.getElementById('heading').classList.remove("hidden")
+          }
+          else{
+            buildTable(dd)
       
       
         function buildTable(dd){
@@ -331,6 +340,9 @@ document
       
           }
         }
+          }
+        
+        
         })
         .catch(function (error) {
           // Handle network errors or other exceptions

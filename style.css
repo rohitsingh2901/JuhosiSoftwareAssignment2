@@ -133,6 +133,12 @@ th{
   #exampleInput2:hover{
     cursor: not-allowed;
   }
+  .tdcenter{
+    text-align:center;
+  }
+  th{
+    text-align:center;
+  }
 
 
 

@@ -318,23 +318,23 @@ document
           else{
             buildTable(dd)
       
-      
+        
         function buildTable(dd){
           var table = document.getElementById('myTable')
           var element = document.getElementById("mainBox");
           element.style.overflowY = "auto";
           for (var i = 0; i < dd.length; i++){
             var row = `<tr class="trback">
-                    <td>${dd[i].id}</td>
-                    <td>${dd[i].productId}</td>
-                    <td>${dd[i].package}</td>
-                    <td>${dd[i].request_weight}</td>
-                    <td>${dd[i].orderDate}</td>
-                    <td>${dd[i].order_id}</td>
-                    <td>${dd[i].count}</td>
-                    <td>${dd[i].requests}</td>
-                    <td>${dd[i].user_id}</td>
-                    <td>${dd[i].create_time}</td>
+                    <td class="tdcenter">${dd[i].id}</td>
+                    <td class="tdcenter">${dd[i].productId}</td>
+                    <td class="tdcenter">${dd[i].package}</td>
+                    <td class="tdcenter">${dd[i].request_weight}</td>
+                    <td class="tdcenter">${dd[i].orderDate.slice(0,10)}</td>
+                    <td class="tdcenter">${dd[i].order_id}</td>
+                    <td class="tdcenter">${dd[i].count}</td>
+                    <td class="tdcenter">${dd[i].requests}</td>
+                    <td class="tdcenter">${dd[i].user_id}</td>
+                    <td class="tdcenter">${dd[i].create_time}</td>
                   </tr>`
             table.innerHTML += row
       

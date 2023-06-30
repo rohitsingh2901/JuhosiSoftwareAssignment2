@@ -1,3 +1,4 @@
+
 function hiddeMain(){
   document.getElementById("maincard").classList.toggle("hidden");
 }
@@ -400,7 +401,18 @@ document
 
 
 
-
+  function handdlecloth(){
+    document.getElementById('Clothing').checked = true;
+  }
+  function handdlemobile(){
+    document.getElementById('Mobiles').checked = true;
+  }
+  function handdlemouse(){
+    document.getElementById('Mouse').checked = true;
+  }
+  function handdleshirt(){
+    document.getElementById('Shirt').checked = true;
+  }
 
 
 

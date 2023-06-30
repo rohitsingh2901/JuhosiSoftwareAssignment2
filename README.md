@@ -1,6 +1,6 @@
 # ExpressLoginSystem
 
-Welcome to the ExpressLoginSystem repository under the Organization Name! This project showcases a login system with a MySQL online server and utilizes Express.js for user authentication. Once logged in, users can fill out a table to enter details for items and products they wish to purchase. The entered data is then saved into the MySQL server.
+Welcome to the ExpressLoginSystem repository under Juhosi Software Technologies Private Limited. This project showcases a login system with a MySQL online server and utilizes Express.js for user authentication. Once logged in, users can fill out a table to enter details for items and products they wish to purchase. The entered data is then saved into the MySQL server.
 
 ## Features
 
